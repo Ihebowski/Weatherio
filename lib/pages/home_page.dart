@@ -29,7 +29,8 @@ class _HomePageState extends State<HomePage> {
         future: currentWeather,
         builder: (context, AsyncSnapshot<Response> snapshot) {
           if (!snapshot.hasData) {
-            return const Text("Error");
+            print("failed");
+            return Text("Error");
           } else {
             return Container(
               padding: const EdgeInsets.symmetric(horizontal: 10.0),
